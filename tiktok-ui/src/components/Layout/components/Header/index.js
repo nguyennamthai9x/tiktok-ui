@@ -5,11 +5,14 @@ import 'tippy.js/dist/tippy.css';
 
 import styles from './Header.module.scss';
 
+import Button from '~/components/Button';
 import images from '~/assets/images';
 import {faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import {Wrapper as PopperWrapper} from '~/components/Popper'; 
 import AccountItem from '~/components/AccountItem';
+
+
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -17,7 +20,7 @@ function Header() {
 
     useEffect(() =>{
         setTimeout(() => {
-            setSearchResults([1,2,3])
+            setSearchResults([])
         }, 0)
     })
 
@@ -57,7 +60,8 @@ function Header() {
                 </Tippy>
 
                 <div className={cx('actions')}>
-        
+                    <Button text>Upload</Button>
+                    <Button primary >Log in</Button>
                 </div>
             </div>
         </header>
