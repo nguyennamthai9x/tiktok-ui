@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 function Button({
     to,
     href,
-    disable = false,
+    disabled = false,
     primary = false,
     outline = false,
     rounded = false,
@@ -27,14 +27,13 @@ function Button({
     };
 
     // Remove event listener
-    if(disable){
-        Object.keys(props).forEach(key => {
-            if(key.startsWith('on') && typeof props[key] === 'function'){
-                delete props[key]
+    if (disabled) {
+        Object.keys(props).forEach((key) => {
+            if (key.startsWith('on') && typeof props[key] === 'function') {
+                delete props[key];
             }
-        })
+        });
     }
-
     if (to) {
         props.to = to;
         Comp = Link;
@@ -48,7 +47,7 @@ function Button({
         primary,
         outline,
         text,
-        disable,
+        disabled,
         rounded,
         small,
         large,
