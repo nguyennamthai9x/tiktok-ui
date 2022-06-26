@@ -3,7 +3,6 @@
     --search-height: 46px;
     --search-top-spacer: 9px;
     --search-button-width: 52px;
-
     
     width: 100%;
     height: var(--default-layout-header-height, 60px);
@@ -15,6 +14,7 @@
 .inner{
     height: 100%;
     width: var(--default-layout-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -101,4 +101,5 @@
     margin-left: 20px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
 }
