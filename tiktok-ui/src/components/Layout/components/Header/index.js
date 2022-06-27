@@ -16,7 +16,6 @@ import {
     faEarthAsia,
     faCircleQuestion,
     faKeyboard, 
-    faCloudUpload,
     faGear,
     faCoins,
     faUser,
@@ -27,7 +26,8 @@ import { Fragment, useEffect, useState } from 'react';
 import {Wrapper as PopperWrapper} from '~/components/Popper'; 
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
-
+import { MailBox, MessageIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -150,7 +150,9 @@ function Header() {
                                 placement='bottom'
                             >
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                    {/* <MessageIcon />
+                                    <MailBox /> */}
                                 </button>
                             </Tippy>
                         </>
@@ -162,14 +164,11 @@ function Header() {
                         </>
                     )}
 
-                    <Menu
-                        items={userMenu}
-                        onChange={handleMenuChange}
-                    >
+                    <Menu items={userMenu} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img 
+                            <Image 
                                 className={cx('user-avatar')} 
-                                src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/2/20/1016092/Midu-04.jpeg"
+                                src="https://media-cdnv2.laodong.vn/Storage/NewsPortal/2022/2/20/1016092/Midu-04.jpeg"
                                 alt="Midu"
                             />
                         ):(
