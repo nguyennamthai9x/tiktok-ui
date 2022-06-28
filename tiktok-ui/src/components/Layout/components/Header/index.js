@@ -3,10 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
-
-
-import Button from '~/components/Button';
-import images from '~/assets/images';
 import { 
     faEllipsisVertical,
     faEarthAsia,
@@ -19,6 +15,10 @@ import {
     // faMessage
 } from '@fortawesome/free-solid-svg-icons';
 import { Fragment } from 'react';
+import routesConfig from '~/config/routes'
+
+import Button from '~/components/Button';
+import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
 import { MailBox, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
@@ -99,7 +99,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to='/'>
+                <Link to={routesConfig.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="TikTok"/>
                 </Link>
 
