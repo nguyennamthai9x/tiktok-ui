@@ -27,7 +27,7 @@ function Search() {
     const inputRef = useRef()
 
     useEffect(() =>{
-        if(!searchValue.trim()){
+        if(!debounced.trim()){
             setSearchResults([])
             return
         }
@@ -36,8 +36,8 @@ function Search() {
             setLoading(true)
 
             const results = await searchService.search(debounced)
+
             setSearchResults(results)
-        
             setLoading(false)
         }
 

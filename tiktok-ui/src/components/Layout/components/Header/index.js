@@ -2,6 +2,8 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
+
 
 import Button from '~/components/Button';
 import images from '~/assets/images';
@@ -20,10 +22,9 @@ import { Fragment } from 'react';
 import Menu from '~/components/Popper/Menu';
 import { MailBox, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
-
+import Search from '../Search';
 
 import styles from './Header.module.scss';
-import Search from '../Search';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -98,7 +99,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="TikTok"/>
+                <Link to='/'>
+                    <img src={images.logo} alt="TikTok"/>
+                </Link>
 
                 {/* Search */}
                 <Search />
