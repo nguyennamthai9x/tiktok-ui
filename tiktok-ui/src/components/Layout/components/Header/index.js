@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react';
-import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 
 import Button from '~/components/Button';
@@ -132,7 +131,7 @@ function Header() {
                         {currentUser ? (
                             <Image 
                                 className={cx('user-avatar')} 
-                                src="https://media-cdnv2.laodong.vn/Storage/NewsPortal/2022/2/20/1016092/Midu-04.jpeg"
+                                src="https://photo-cms-baophapluat.zadn.vn/w800/Uploaded/2022/bpivpvoi/2021_04_02/midu1617247581731178916561_died.jpg"
                                 alt="Midu"
                             />
                         ):(
