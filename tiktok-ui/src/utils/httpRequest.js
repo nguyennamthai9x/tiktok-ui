@@ -1,13 +1,12 @@
-import axios from "axios";
+import axios from 'axios';
 
-const request = axios.create({
+const httpRequest = axios.create({
     baseURL: process.env.REACT_APP_BASE_URL,
-})
+});
 
 export const get = async (path, options = {}) => {
-    const response = await request.get(path, options)
-    return response.data
+    const response = await httpRequest.get(path, options);
+    return response.data;
+};
 
-}
-
-export default request
+export default httpRequest;
