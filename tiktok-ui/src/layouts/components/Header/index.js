@@ -12,10 +12,9 @@ import {
     faCoins,
     faUser,
     faSignOut,
-    // faMessage
 } from '@fortawesome/free-solid-svg-icons';
 import { Fragment } from 'react';
-import routesConfig from '~/config/routes'
+import config from '~/config'
 
 import Button from '~/components/Button';
 import images from '~/assets/images';
@@ -99,7 +98,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="TikTok"/>
                 </Link>
 

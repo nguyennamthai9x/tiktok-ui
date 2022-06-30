@@ -4,7 +4,7 @@ import {
     faCircleXmark, faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 
-import * as searchService from '~/apiServices/searchService'
+import * as searchService from '~/services/searchService'
 import {Wrapper as PopperWrapper} from '~/components/Popper'; 
 import AccountItem from '~/components/AccountItem';
 import { SearchIcon } from '~/components/Icons';
